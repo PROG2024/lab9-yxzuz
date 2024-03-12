@@ -34,3 +34,7 @@ class CircledTest(unittest.TestCase):
         total_area = c1.get_area()+c2.get_area()
         self.assertAlmostEqual(total_area,new_circle.get_area()) # check area
         self.assertAlmostEqual(math.sqrt((c1.get_radius())**2 + (c2.get_radius())**2),new_circle.get_radius())
+
+    def test_negative_radius(self):
+        with self.assertRaises(ValueError):
+            bad = Circle(-33.3)
