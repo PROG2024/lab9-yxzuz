@@ -3,7 +3,19 @@ import math
 
 
 class Circle:
+    """doctest for circle class
 
+    >>> c1 = Circle(3)
+    >>> c2 = Circle(4)
+    >>> new_circle = c1.add_area(c2)
+    >>> new_circle.get_radius()
+    5.0
+    >>> bad = Circle(-66)
+    Traceback (most recent call last):
+    ...
+    ValueError: radius must be non-negative
+
+    """
     def __init__(self, radius):
         """Initialize a circle with given radius.
         
@@ -39,3 +51,5 @@ class Circle:
         return f"Circle({self.radius})"
     
     __repr__ = __str__
+
+
