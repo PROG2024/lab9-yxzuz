@@ -7,3 +7,18 @@
 
    You can use pytest or unittest.
 """
+
+import unittest
+from counter import Counter
+
+class SingletonTest(unittest.TestCase):
+    """Tests of the counter class."""
+
+
+    def test_singleton(self):
+        c1 = Counter()
+        c1.increment()
+        self.assertEqual(2,c1.count)
+        c2 = Counter()
+        self.assertEqual(2,c2.count)
+
